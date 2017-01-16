@@ -4,10 +4,10 @@ package jp.ac.uryukyu.ie.e165759;
  * Created by e165759 on 2016/11/24.
  **/
 class LivingThing {
-    private String name;
+    String name;
     private int hitPoint;
-    private int attack;
-    private boolean dead;
+    int attack;
+    boolean dead;
 
     /**
      * コンストラクタ。名前、最大HP、攻撃力を指定する。
@@ -65,7 +65,7 @@ class LivingThing {
      * 指定されたダメージを hitPoint から引き、死亡判定を行う。
      * @param damage 受けたダメージ
      */
-    private void wounded(int damage){
+    void wounded(int damage){
         hitPoint -= damage;
         if( hitPoint < 0 ) {
             dead = true;
